@@ -185,3 +185,52 @@ h2 {
     background-color: #ad4929;
 }
 
+#portfolio{
+    height: 250px;
+
+    margin-bottom: 120px;
+
+    background-image: url(img/bonecos.png);
+    background-size: 250px;
+
+    background-repeat: repeat;
+
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+.filtro {
+    height: 100%;
+    width: 100%;
+
+    background-color: #47208bc2;
+
+    position: absolute;
+    top: 0;
+}
+
+#portfolio .container_grid{
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#portfolio a {
+    width: fit-content;
+
+    font-family: 'Anta';
+    font-size: 28px;
+
+    color: #fff;
+
+    z-index: 1;
+
+    transition: transform 250ms ease;
+}
+
+#portfolio a:hover{
+    transform: scale(1.05);
+}
