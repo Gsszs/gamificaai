@@ -82,7 +82,42 @@ header img {
 .conteudo_banner p {
     color: #fff;
     font-family: 'Anta';
-    font-size: 20px;
+    font-size: 32px;
+}
+
+.conteudo_banner span{
+    display: block;
+
+    overflow: hidden;
+
+    border-right: 3.5px solid var(--laranja-gamifica);
+    white-space: nowrap;
+    
+    animation: 
+        digitando 2s steps(40, end),
+        cursor 0.75s step-end infinite
+    ;
+}
+
+@keyframes digitando {
+    from {
+       width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--laranja-gamifica);
+    }
 }
 
 #sobre {
@@ -354,3 +389,53 @@ h2 {
     background-color: #ad4929;
 }
 
+#contato form input::placeholder, 
+#contato form textarea::placeholder {
+    color: #b9b9b9;
+}
+
+footer {
+    height: 290px;
+
+    background-color: var(--roxo-gamifica);
+}
+
+footer .container_grid {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.redes-sociais p {
+    color: #fff;
+
+    font-family: 'Anta';
+    font-size: 24px;
+}
+
+.icones-redes {
+    width: 240px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones-redes a {
+    color: #fff;
+    transition: color 150ms ease;
+}
+
+.icones-redes a:hover {
+    color: #f06638
+}
