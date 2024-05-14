@@ -19,3 +19,41 @@ window.onresize = () => {
     iconeX.style.display = "inline"
     iconeBarras.style.display = "none"
 }
+
+// Carrossel
+
+let slides = [
+    'primeiro-banner',
+    'segundo-banner',
+    'terceiro-banner'
+]
+
+let slideAtual = 0
+
+let banner = document.querySelector(".banner")
+
+banner.classList.add(slides[slideAtual])
+
+const proximoSlide = () => {
+    banner.classList.remove(slides[slideAtual])
+
+    if (slideAtual == 2) {
+        slideAtual = 0
+    } else {
+        slideAtual++
+    }
+
+    banner.classList.add(slides[slideAtual])
+}
+
+const anteriorSlide = () => {
+    banner.classList.remove(slides[slideAtual])
+
+    if (slideAtual == 0) {
+        slideAtual = 2
+    } else {
+        slideAtual--
+    }
+
+    banner.classList.add(slides[slideAtual])
+}
