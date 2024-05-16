@@ -20,7 +20,6 @@ window.onresize = () => {
     iconeBarras.style.display = "none"
 }
 
-// Carrossel
 
 let slides = [
     'primeiro-banner',
@@ -65,24 +64,7 @@ const selecionarSlide = (indiceSlide) => {
     slideAtual = indiceSlide
 }
 
-let listaCases = [
-    {
-        imagem: "https://unsplash.it/640/425?image=3",
-        descricao: "Uma empresa e tecnologia lança um desafio de gamificação onde os funcionarios devem propor e implementar ideias inovadoras."
-    },
-    {
-        imagem: "https://unsplash.it/640/425?image=36",
-        descricao: "Uma empresa de consultoria cria uma narrativa interativa de gamificação para seu programa de treinamento."
-    },
-    {
-        imagem: "https://unsplash.it/640/425?image=42",
-        descricao: "Uma empresa de vendas implementa sua competição gamificadaentre equipes que competem pelo todo do ranking"
-    },
-    {
-        imagem: "https://unsplash.it/640/425?image=71",
-        descricao: "Uma empresa de saúde promove o bem-estar dos funcionários através de um desafio de gamificação de condicionamento físico"
-    }
-]
+let listaCases = []
 
 const renderizarCases = () => {
     let elementoLista = document.getElementById("lista-cards")
@@ -98,4 +80,37 @@ const renderizarCases = () => {
     })
 
     elementoLista.innerHTML = template
+}
+
+const carregarCases = () => {
+    fetch("http://localhost:3000/cases")
+    .then( (resposta) => resposta.json() )
+    .then( (dados) => {
+        listaCases = dados
+        renderizarCases()
+    })
+    .catch( erro => console.error(erro))
+}
+
+
+const solicitarOrcamento = () => {
+    let valorNome = document.getElementById("campo-nome").value
+    let valorEmail = document.getElementById("campo-email").value
+    let valorDescricao = document.getElementById("campo-descricao").value
+
+    let dadosForm = {
+        nome: valorNome,
+        email: valorEmail,
+        descricao: valorDescricao
+    }
+
+    fetch("http://127.0.0.1:3000/solicitacoes", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dadosForm)
+    })
+    .then(resposta => console.log(resposta))
+    .catch(erro => console.error(erro))
 }
