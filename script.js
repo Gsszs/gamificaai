@@ -93,7 +93,7 @@ const carregarCases = () => {
 }
 
 
-const solicitarOrcamento = () => {
+const solicitarOrcamento = (event) => {
     let valorNome = document.getElementById("campo-nome").value
     let valorEmail = document.getElementById("campo-email").value
     let valorDescricao = document.getElementById("campo-descricao").value
@@ -111,6 +111,16 @@ const solicitarOrcamento = () => {
         },
         body: JSON.stringify(dadosForm)
     })
-    .then(resposta => console.log(resposta))
-    .catch(erro => console.error(erro))
+    .then(resposta => {
+        console.log(resposta)
+        document.querySelector("#contato form").reset()
+
+        alert("Solicitação cadastrada")
+    })
+    .catch(erro => {
+        console.error(erro)
+        alert("Erro na requisição")
+    })
+
+    event.preventDefault()
 }
