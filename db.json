@@ -2,20 +2,37 @@
   "cases": [
     {
       "imagem": "https://unsplash.it/600/400?image=3",
-      "descricao": "Uma empresa de tecnologia lança um desafio de gamificação onde os funcionarios devem propor e implementar ideias inovadoras."
+      "descricao": "Uma empresa de tecnologia lança um desafio de gamificação onde os funcionarios devem propor e implementar ideias inovadoras.",
+      "id": "def9"
     },
     {
       "imagem": "https://unsplash.it/600/400?image=36",
-      "descricao": "Uma empresa de consultoria cria uma narrativa interativa de gamificação para seu programa de treinamento."
+      "descricao": "Uma empresa de consultoria cria uma narrativa interativa de gamificação para seu programa de treinamento.",
+      "id": "4012"
     },
     {
       "imagem": "https://unsplash.it/600/400?image=42",
-      "descricao": "Uma empresa de vendas implementa uma competição gamificada entre equipes que competem pelo topo do ranking"
+      "descricao": "Uma empresa de vendas implementa uma competição gamificada entre equipes que competem pelo topo do ranking",
+      "id": "a276"
     },
     {
       "imagem": "https://unsplash.it/600/400?image=71",
-      "descricao": "Uma empresa de saúde promove o bem-estar dos funcionários através de um desafio de gamificação de condicionamento físico"
+      "descricao": "Uma empresa de saúde promove o bem-estar dos funcionários através de um desafio de gamificação de condicionamento físico",
+      "id": "8ce6"
     }
   ],
-  "solicitacoes": []
+  "solicitacoes": [
+    {
+      "id": "135f",
+      "nome": "",
+      "email": "",
+      "texto": ""
+    },
+    {
+      "id": "5216",
+      "nome": "Gabriel dos Santos",
+      "email": "asdad@asda",
+      "texto": "asdasda"
+    }
+  ]
 }
